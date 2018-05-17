@@ -54,9 +54,16 @@ Then we computed 256 length FFT using the CMSIS DSP library and extracted the do
 Further to improve the accuracy and robustness of our system MFCC was used to identify person classification based on a trained model
 The Procedure to use MFCC (Mel Frequency Cepstral Coefficient) was to use 6 filter banks for the corresponding FFT size of 256.
 
-Then Passing the same through the FFT of the signal through each filter banks and then computing the energy for each signal passed through the filter banks. This forms the feature vector.
+We used the Mel Frequency Cepstral coefficients because the voice lies mainly in 70 to 250 Hz. So instead of using linear filter banks which could have been equally spaced, we used the mel frequency which had a lot of filter in the lower frequency.
+
+Below image shows the Mel filter banks for 13 filers for 128 points (Other 128 points being symmetric due to being a real signal). We used the 6 filters for classification (Filters which are closer to the human voice range). We use [this](matlab_code/Create_MelFrequencyFilterBank.m) MATLAB function to get the filter bank values.
+
 
 ![MFCC](images/Mel_filterbank.JPG)
+
+Then Passing the same through the FFT of the signal through each filter banks and then computing the energy for each signal passed through the filter banks. This formed the feature vector.
+
+
 
 
 
