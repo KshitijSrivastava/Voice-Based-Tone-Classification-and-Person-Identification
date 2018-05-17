@@ -19,9 +19,9 @@ Download the CMSIS Library from the following [link](https://github.com/ARM-soft
 ![Procedure](images/Procedure.JPG)
 
 ## Materials needed
--Analog Mic/ Sound Detector Module
--Resistance and Capacitances to make a low pass filter
--LED
+- Analog Mic/ Sound Detector Module
+- Resistance and Capacitances to make a low pass filter
+- LED
 
 
 ## Initialization in Cube Mx
