@@ -71,6 +71,8 @@ The code for the project is attached [here](https://github.com/KshitijSrivastava
 
 ## Results
 
+Although our letter detection and person identification was not perfect in every aspect, the operation of the project works as expected. It was able to recognize the letters we spoke into the microphone circuit with great accuracy and allows accurate estimations of the user's voice in addition recognize the user who is speaking.
+
 
 ## Future Work
 
