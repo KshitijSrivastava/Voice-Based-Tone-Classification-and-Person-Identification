@@ -16,7 +16,7 @@ Download the CMSIS Library from the following [link](https://github.com/ARM-soft
 
 ## Block Diagram
 
-![Procedure](https://github.com/KshitijSrivastava/Voice-Based-Tone-Classification-and-Person-Identification/images/Procedure.JPG)
+![Procedure](Voice-Based-Tone-Classification-and-Person-Identification/images/Procedure.JPG)
 
 
 
