@@ -28,9 +28,11 @@ Download the CMSIS Library from the following [link](https://github.com/ARM-soft
 
 ### For ADC-DMA
 We need sampling frequency of the ADC to be around 8k Hz since the voice signal can hardly exceed this voice.
-We initialized ADC DMA in Continuous Mode with High Speed Clock Frequency as 16 Mhz. The Prescaler value of 8 was chosen so that ADC Clock Frequency=2Mhz. No of cycles is chosen to be 247.5, so that the sampling freq= 7600 Hz.
+We initialized ADC DMA in Continuous Mode with High Speed Clock Frequency as 16 Mhz. The Prescaler value of 8 was chosen so that ADC Clock Frequency=2Mhz. Nnumber of cycles is chosen to be 247.5, so that the sampling freq= 7600 Hz.
 
-Total of 256 data points is being stored in the array which is circular in nature.
+Sampling frequency=2 Mhz/(247.5 + Tconv), where Tconv=12.5 for STM32L4. Refer to this document- [link](www.st.com/resource/en/application_note/cd00258017.pdf)
+
+Total of 256 data points is being stored in the array which is stored circularly.
 
 
 ### For Interrupt Generation
