@@ -18,10 +18,20 @@ Download the CMSIS Library from the following [link](https://github.com/ARM-soft
 
 ![Procedure](Voice-Based-Tone-Classification-and-Person-Identification/images/Procedure.JPG)
 
+## Materials needed
+Analog Mic/ Sound Detector Module
+Resistance and Capacitances to make a low pass filter
+LED
 
 
+## Initialization in Cube Mx
 
+### For ADC-DMA
+We need sampling frequency of the ADC to be around 8k Hz since the voice signal can hardly exceed this voice.
 
+### For Interrupt Generation
+
+### For LED Pins
 
 
 You can use the [editor on GitHub](https://github.com/KshitijSrivastava/Voice-Based-Tone-Classification-and-Person-Identification/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
