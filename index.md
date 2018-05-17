@@ -5,11 +5,11 @@ In this project, we created a smart voice based human identification system that
 
 # Usage of IDE's
 
-Free versions of IDE's like Keil, IAR wont work with CMSIS DSP Library, since they have limited memory in the free version. Instead free IDE's like Atollic True Studio, GNU Eclipse based free IDE's mut be used which dont have the memory constraint.
+Free versions of IDE's like Keil, IAR wont work with CMSIS DSP Library, since they have limited memory in the free version. Instead free IDE's like Atollic True Studio, GNU Eclipse based free IDE's should be used which dont have the memory constraint.
 
 # Installation of CMSIS DSP Library
 
-Download the CMSIS Library from the Internet. Follow the instruction as follows in the [video](https://www.youtube.com/watch?v=dLHkYlF3suc&feature=youtu.be).
+Download the CMSIS Library from the following [link](https://github.com/ARM-software/CMSIS_5) and follow the instruction as given in the [video](https://www.youtube.com/watch?v=dLHkYlF3suc&feature=youtu.be).
 
 
 
