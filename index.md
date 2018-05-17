@@ -16,7 +16,7 @@ Download the CMSIS Library from the following [link](https://github.com/ARM-soft
 
 ## Block Diagram
 
-![Procedure](Voice-Based-Tone-Classification-and-Person-Identification/images/Procedure.JPG)
+![Procedure](images/Procedure.JPG)
 
 ## Materials needed
 Analog Mic/ Sound Detector Module
