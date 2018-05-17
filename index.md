@@ -62,9 +62,19 @@ Below image shows the Mel filter banks for 13 filers. We used the 6 filters for 
 
 Then Passing the same through the FFT of the signal through each filter banks and then computing the energy for each signal passed through the filter banks. This formed the feature vector.
 
-K means clustering was used to identify the voice from the feature vector. It find nearest cluster from the extracted feature vector from the cluster centeriods. The cluster centeriods are extracted by training the speech data in MATLAB.
+K means clustering was used to identify the voice from the feature vector. It finds nearest cluster from the extracted feature vector by finding the shortest distance of the vector from the cluster centeriods. The cluster centeriods are extracted by training the speech data in MATLAB.
 
-From the feature vector to identify the voice Clustering was used by using K means clustering algorithm which is to find the nearest cluster from the extracted feature vector from the cluster centroids. The cluster centroids are extracted by training the speech data in matlab.
+## Code
+
+
+## Results
+
+
+## Future Work
+
+The possibility, scope and application for our product(/prototype ) is enormous. Possible application/fields are: voice enabled assistance, voice based security system, music classification, music trainer, person identification, sentiment analysis, mood based lighting system, home automation etc.
+Being able to do automatic run of the program by using ISR as an interrupt whenever a person speaks.
+As a part of our future work, we would like make it more generalized by extending it to work with words and then subsequently with sentences rather than just tones. We would also use a better preprocessing and classification techniques which would improve the accuracy even in noisy environment. Later we plan to extended for the use as in home automation/personal assistant.  
 
 
 
