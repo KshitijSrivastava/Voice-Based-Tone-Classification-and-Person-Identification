@@ -34,7 +34,6 @@ Sampling frequency=2 Mhz/(247.5 + Tconv), where Tconv=12.5 for STM32L4. Refer to
 
 Total of 256 data points is being stored in the array which is stored circularly.
 
-
 ### For Interrupt Generation
 
 PC13 could also be used as an interrupt to start the ADC-DMA whenever the voice signal exceed a threshold value that is set on the analog microphone(The Digital Output of Mic connected to the PC13). Whenever the voice exceed the threshold, the program would go as the Interrupt Service Routine.
@@ -51,18 +50,21 @@ For delay to work in the interrupt service routine, In the NVIC set the GPIO int
 We initialized ADC DMA and took 256 samples of the data with the sampling freq= 7600 Hz.
 Then we computed 256 length FFT using the CMSIS DSP library and extracted the dominant frequency of the voice by finding the maximum value of the FFT and its corresponding frequency. This dominant frequency found was used for real time classification of O, Aa, E.
 
-Further to improve the accuracy and robustness of our system MFCC was used to identify person classification based on a trained model
-The Procedure to use MFCC (Mel Frequency Cepstral Coefficient) was to use 6 filter banks for the corresponding FFT size of 256.
+Further to improve the accuracy and robustness of our system MFCC was used for person classification.
+The Procedure to use MFCC (Mel Frequency Cepstral Coefficient) was to use 6 filter banks for the corresponding FFT size of 256 and passing signals to the filters.
 
-We used the Mel Frequency Cepstral coefficients because the voice lies mainly in 70 to 250 Hz. So instead of using linear filter banks which could have been equally spaced, we used the mel frequency which had a lot of filter in the lower frequency.
+We used the Mel Frequency Cepstral coefficients because the voice lies mainly in 70 to 250 Hz. So instead of using linear filter banks which could have been equally spaced, we used the mel frequency which had a lot of filters in the lower frequency.
 
-Below image shows the Mel filter banks for 13 filers for 128 points (Other 128 points being symmetric due to being a real signal). We used the 6 filters for classification (Filters which are closer to the human voice range). We use [this](matlab_code/Create_MelFrequencyFilterBank.m) MATLAB function to get the filter bank values.
+Below image shows the Mel filter banks for 13 filers. We used the 6 filters for classification (Filters which are closer to the human voice range). We use [this](matlab_code/Create_MelFrequencyFilterBank.m) MATLAB function to get the filter bank values.
 
 
 ![MFCC](images/Mel_filterbank.JPG)
 
 Then Passing the same through the FFT of the signal through each filter banks and then computing the energy for each signal passed through the filter banks. This formed the feature vector.
 
+K means clustering was used to identify the voice from the feature vector. It find nearest cluster from the extracted feature vector from the cluster centeriods. The cluster centeriods are extracted by training the speech data in MATLAB.
+
+From the feature vector to identify the voice Clustering was used by using K means clustering algorithm which is to find the nearest cluster from the extracted feature vector from the cluster centroids. The cluster centroids are extracted by training the speech data in matlab.
 
 
 
