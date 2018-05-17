@@ -28,10 +28,20 @@ LED
 
 ### For ADC-DMA
 We need sampling frequency of the ADC to be around 8k Hz since the voice signal can hardly exceed this voice.
+We initialized ADC DMA in Continuous Mode with High Speed Clock Frequency as 16 Mhz. The Prescaler value of 8 was chosen so that ADC Clock Frequency=2Mhz. No of cycles is chosen to be 247.5, so that the sampling freq= 7600 Hz.
+
+Total of 256 data points is being stored in the array which is circular in nature.
+
 
 ### For Interrupt Generation
 
+PC13 could also be used as an interrupt to start the ADC-DMA whenever the voice signal exceed a threshold value that is set on the analog microphone(The Digital Output of Mic connected to the PC13). Whenever the voice exceed the threshold, the program would go as the Interrupt Service Routine.
+
+
 ### For LED Pins
+3 LED pins were chosen for the purpose of showing which person is speaking, 3 LED was used for showing what alphabet is he being spoken, 1 LED for showing misclassified answer and 1 LED to know when DMA is storing the data.
+
+
 
 
 You can use the [editor on GitHub](https://github.com/KshitijSrivastava/Voice-Based-Tone-Classification-and-Person-Identification/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
