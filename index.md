@@ -41,7 +41,7 @@ PC13 could also be used as an interrupt to start the ADC-DMA whenever the voice 
 ### For LED Pins
 3 LED pins were chosen for the purpose of showing which person is speaking, 3 LED was used for showing what alphabet is he being spoken, 1 LED for showing misclassified answer and 1 LED to know when DMA is storing the data.
 
-
+![PIN Diagram](images/Pin_diagram.JPG)
 
 
 You can use the [editor on GitHub](https://github.com/KshitijSrivastava/Voice-Based-Tone-Classification-and-Person-Identification/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
