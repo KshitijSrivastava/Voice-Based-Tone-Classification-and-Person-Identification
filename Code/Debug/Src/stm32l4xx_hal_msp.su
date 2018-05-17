@@ -1,3 +1,0 @@
-stm32l4xx_hal_msp.c:51:6:HAL_MspInit	16	static
-stm32l4xx_hal_msp.c:83:6:HAL_ADC_MspInit	48	static
-stm32l4xx_hal_msp.c:128:6:HAL_ADC_MspDeInit	8	static
