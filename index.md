@@ -78,7 +78,11 @@ The possibility, scope and application for our product(/prototype ) is enormous.
 Being able to do automatic run of the program by using ISR as an interrupt whenever a person speaks.
 As a part of our future work, we would like make it more generalized by extending it to work with words and then subsequently with sentences rather than just tones. We would also use a better preprocessing and classification techniques which would improve the accuracy even in noisy environment. Later we plan to extended for the use as in home automation/personal assistant.  
 
+## Team
 
+- Kshitij Srivastava
+- Aayush 
+- Aman Jain
 
 
 You can use the [editor on GitHub](https://github.com/KshitijSrivastava/Voice-Based-Tone-Classification-and-Person-Identification/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
