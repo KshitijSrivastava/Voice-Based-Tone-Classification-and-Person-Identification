@@ -39,12 +39,24 @@ Total of 256 data points is being stored in the array which is stored circularly
 
 PC13 could also be used as an interrupt to start the ADC-DMA whenever the voice signal exceed a threshold value that is set on the analog microphone(The Digital Output of Mic connected to the PC13). Whenever the voice exceed the threshold, the program would go as the Interrupt Service Routine.
 
+For delay to work in the interrupt service routine, In the NVIC set the GPIO interrupt priority to a higher value than the delay intrrupt.  
 
 ### For LED Pins
 3 LED pins were chosen for the purpose of showing which person is speaking, 3 LED was used for showing what alphabet is he being spoken, 1 LED for showing misclassified answer and 1 LED to know when DMA is storing the data.
 
 ![PIN Diagram](images/Pin_diagram.JPG)
 
+## Algorithmic Development
+
+We initialized ADC DMA and took 256 samples of the data with the sampling freq= 7600 Hz.
+Then we computed 256 length FFT using the CMSIS DSP library and extracted the dominant frequency of the voice by finding the maximum value of the FFT and its corresponding frequency. This dominant frequency found was used for real time classification of O, Aa, E.
+
+Further to improve the accuracy and robustness of our system MFCC was used to identify person classification based on a trained model
+The Procedure to use MFCC (Mel Frequency Cepstral Coefficient) was to use 6 filter banks for the corresponding FFT size of 256.
+
+Then Passing the same through the FFT of the signal through each filter banks and then computing the energy for each signal passed through the filter banks. This forms the feature vector.
+
+![MFCC](images/Mel_filterbank.JPG)
 
 
 
