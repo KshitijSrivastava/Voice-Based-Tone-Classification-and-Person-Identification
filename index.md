@@ -77,7 +77,7 @@ Although our letter detection and person identification was not perfect in every
 
 The above video shows that it correctly identifies the tone Oo and the person who has spoken i.e Aayush.
 
-[![Kshitij Speaking Oo](http://img.youtube.com/vi/WSseICapUB0/0.jpg)](http://www.youtube.com/watch?v=WSseICapUB0 "Kshitij Speaking Oo")
+[![Kshitij Speaking Oo](http://img.youtube.com/vi/d2qfPuaDszo/0.jpg)](http://www.youtube.com/watch?v=d2qfPuaDszo "Kshitij Speaking Oo")
 
 The above video shows that it correctly identifies the tone Oo and Kshitij who has spoken it.
 
