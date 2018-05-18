@@ -94,6 +94,25 @@ As a part of our future work, we would like make it more generalized by extendin
 - Aayush 
 - Aman Jain
 
+```
+void main()
+{
+  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_SET);
+  	HAL_ADC_Start_DMA(&hadc1,(uint32_t*)adc_data,256);
+  	HAL_Delay(1000);
+  	HAL_ADC_Stop_DMA(&hadc1);
+  	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
+  	HAL_Delay(1000);
+}
+
+```
+
+` arm_status status;                           /* Status of the example */
+  		arm_cfft_radix4_instance_f32 S; `
+
+
+
+
 
 You can use the [editor on GitHub](https://github.com/KshitijSrivastava/Voice-Based-Tone-Classification-and-Person-Identification/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
