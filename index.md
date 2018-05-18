@@ -69,6 +69,32 @@ K means clustering was used to identify the voice from the feature vector. It fi
 The code for the project is attached [here](https://github.com/KshitijSrivastava/Voice-Based-Tone-Classification-and-Person-Identification/tree/master/Code/FFT_27thApril). 
 
 
+### Code for ADC_DMA
+
+```
+    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_SET);   // LED Pin for indicating the start of DMA 
+  	HAL_ADC_Start_DMA(&hadc1,(uint32_t*)adc_data,256);  // Starting of the ADC DMA
+  	HAL_Delay(1000);                                    // Taking data for 1 second
+  	HAL_ADC_Stop_DMA(&hadc1);                           // Stopping the DMA
+  	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET); // LED Pin for indicating the stop of DMA 
+  	HAL_Delay(1000);                                    // Delay of 1 Second
+
+```
+
+### Code for FFT
+
+Data input should be twice the length of the FFT. Real number followed by the complex number
+
+```
+arm_status status;                                                    // For Status
+arm_cfft_radix4_instance_f32 S;                                       // For creating the instance
+status = ARM_MATH_SUCCESS;
+status = arm_cfft_radix4_init_f32(&S,fftSize,ifftFlag, doBitReverse); // 
+arm_cfft_radix4_f32(&S, fft_inp);                                     // Finding the FFT of the data
+arm_cmplx_mag_f32(fft_inp,fft_mag ,fftSize);                          // Finding the magnitude of the FFT
+
+```
+
 ## Results
 
 Although our letter detection and person identification was not perfect in every aspect, the operation of the project works as expected. It was able to recognize the letters we spoke into the microphone circuit with great accuracy and allows accurate estimations of the user's voice in addition recognize the user who is speaking.
@@ -93,59 +119,3 @@ As a part of our future work, we would like make it more generalized by extendin
 - Kshitij Srivastava
 - Aayush 
 - Aman Jain
-
-```
-void main()
-{
-  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_SET);
-  	HAL_ADC_Start_DMA(&hadc1,(uint32_t*)adc_data,256);
-  	HAL_Delay(1000);
-  	HAL_ADC_Stop_DMA(&hadc1);
-  	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
-  	HAL_Delay(1000);
-}
-
-```
-
-` arm_status status;                           /* Status of the example */
-  		arm_cfft_radix4_instance_f32 S; `
-
-
-
-
-
-You can use the [editor on GitHub](https://github.com/KshitijSrivastava/Voice-Based-Tone-Classification-and-Person-Identification/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/KshitijSrivastava/Voice-Based-Tone-Classification-and-Person-Identification/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
