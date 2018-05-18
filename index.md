@@ -89,7 +89,7 @@ Data input should be twice the length of the FFT. Real number followed by the co
 arm_status status;                                                    // For Status
 arm_cfft_radix4_instance_f32 S;                                       // For creating the instance
 status = ARM_MATH_SUCCESS;
-status = arm_cfft_radix4_init_f32(&S,fftSize,ifftFlag, doBitReverse); // 
+status = arm_cfft_radix4_init_f32(&S,fftSize,ifftFlag, doBitReverse);  
 arm_cfft_radix4_f32(&S, fft_inp);                                     // Finding the FFT of the data
 arm_cmplx_mag_f32(fft_inp,fft_mag ,fftSize);                          // Finding the magnitude of the FFT
 
@@ -97,7 +97,7 @@ arm_cmplx_mag_f32(fft_inp,fft_mag ,fftSize);                          // Finding
 
 ## Results
 
-Although our letter detection and person identification was not perfect in every aspect, the operation of the project works as expected. It was able to recognize the letters we spoke into the microphone circuit with great accuracy and allows accurate estimations of the user's voice in addition recognize the user who is speaking.
+Although our letter detection and person identification was not perfect in every aspect, the operation of the project worked as expected. It was able to recognize the letters we spoke into the microphone circuit with great accuracy and it allowed accurate estimation of the user's voice in addition of recognizing the user who has spoken.
 
 [![Aayush Speaking Oo](http://img.youtube.com/vi/WSseICapUB0/0.jpg)](http://www.youtube.com/watch?v=WSseICapUB0 "Aayush Speaking Oo")
 
