@@ -73,6 +73,10 @@ The code for the project is attached [here](https://github.com/KshitijSrivastava
 
 Although our letter detection and person identification was not perfect in every aspect, the operation of the project works as expected. It was able to recognize the letters we spoke into the microphone circuit with great accuracy and allows accurate estimations of the user's voice in addition recognize the user who is speaking.
 
+[![Aayush Speaking Oo](http://img.youtube.com/vi/WSseICapUB0/0.jpg)](http://www.youtube.com/watch?v=WSseICapUB0 "Aayush Speaking Oo")
+
+The above video shows that it correctly Oo for Aayush.
+
 
 ## Future Work
 
